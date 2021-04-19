@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let favoritos of listFavoritos" class="col-lg-3 col-md-4 col-6">
+            <img 
+                tabindex="0" 
+                (keyup.enter)="menu.toggle(favoritos)" 
+                (click)="menu.toggle(favoritos)"
+                src="{{ favoritos.podcast.img }}" 
+                class="img-podcast-favorito"
+            >
+        </div>
+    </div>
+</div>
+
+<app-favoritos-detail #menu></app-favoritos-detail>

@@ -1,0 +1,23 @@
+<div class="row fixed-bottom">
+    <div class="col">
+        <div [ngClass]="{ 'active': rotaAtual == '/home' }" class="menu-item" routerLink="/home">
+            <!-- <i class="fa fa-home"></i> -->
+            <span class="material-icons">home</span>
+            <p>Início</p>
+        </div>
+    </div>
+    <div class="col">
+        <div [ngClass]="{ 'active': rotaAtual == '/pesquisar' }" class="menu-item" routerLink="/pesquisar">
+            <!-- <i class="fa fa-search"></i> -->
+            <span class="material-icons-outlined">search</span>
+            <p>Pesquisar</p>
+        </div>
+    </div>
+    <div class="col">
+        <div [ngClass]="{ 'active': rotaAtual == '/favoritos' }" class="menu-item" routerLink="/favoritos">
+            <!-- <i class="fa fa-heart"></i> -->
+            <span class="material-icons-outlined">favorite</span>
+            <p>Favoritos</p>
+        </div>
+    </div>
+</div>

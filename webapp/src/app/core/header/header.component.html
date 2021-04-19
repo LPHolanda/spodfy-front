@@ -1,0 +1,32 @@
+<div *ngIf="titulo == 'Home'; else headerTitulo" class="container">
+    <div class="row">
+        <div class="col-lg-1 col-md-1 col-2">
+            <img class="perfil-foto" src="assets/img/perfil-photo.png">
+        </div>
+        <div class="col-lg-9 col-md-9 col-6">
+            <span class="perfil-nome">Vinícius</span>
+        </div>
+        <div class="col-lg-1 col-md-1 col-2">
+            <div class="perfil-logo">
+                <!-- <i class="fa fa-question-circle"></i>    -->
+                <span class="material-icons-outlined">help_outline</span>
+            </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-2">
+            <div class="perfil-logo" (click)="logout()">
+                <!-- <i class="fa fa-sign-out"></i> -->
+                <span class="material-icons-outlined">logout</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #headerTitulo>
+    <div class="container">
+        <div class="row header-voltar">
+            <!-- <i class="fa fa-arrow-left" (click)="voltar()"></i> -->
+            <span class="material-icons-outlined back-icon" (click)="voltar()">arrow_back</span>
+            <a class="voltar-nome">{{ titulo }}</a>
+        </div>
+    </div>
+</ng-template>

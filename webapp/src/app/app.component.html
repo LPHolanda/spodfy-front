@@ -1,0 +1,5 @@
+<app-menu 
+    *ngIf="(showMenu$ | async) && eventUrl != '/autenticacao'"
+    [rotaAtual]="eventUrl">
+</app-menu>
+<router-outlet></router-outlet>

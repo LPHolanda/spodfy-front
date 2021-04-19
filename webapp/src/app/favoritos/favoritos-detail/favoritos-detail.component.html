@@ -1,0 +1,73 @@
+<div [ngClass]="{ 'active-menu': isShown }">
+    <div class="menu-bar">
+
+        <div *ngIf="favorito">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ favorito.podcast.img }}" class="detail-img">
+                </div>
+                <div class="col-7">
+                    <p class="detail-podcast">
+                        {{ favorito.podcast.nome_podcast }}
+                    </p>
+                    <p class="detail-produtor">
+                        {{ favorito.podcast.nome_produtor }}
+                    </p>
+                    <p class="detail-descricao">
+                        {{ favorito.podcast.descricao }}
+                    </p>
+                </div>
+                <i  tabindex="0" 
+                    (keyup.space)="toggle()" 
+                    (click)="toggle()"
+                    class="material-icons">
+                    close
+                </i>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 16px;">
+            <div class="col menu">
+                <div class="menu-item">
+                    <!-- <i class="fa fa-headphones"></i> -->
+                    <span class="material-icons">headphones</span>
+                    <p>Ouvir</p>
+                </div>
+            </div>
+            <div class="col menu">
+                <div class="menu-item">
+                    <!-- <i class="fa fa-heart"></i> -->
+                    <span class="material-icons-outlined">favorite</span>
+                    <p>Favoritar</p>
+                </div>
+            </div>
+            <div class="col menu">
+                <div class="menu-item">
+                    <!-- <i class="fa fa-bell"></i> -->
+                    <span class="material-icons">notifications</span>
+                    <p>Notificar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 16px; justify-content: center;">
+            <div class="horario">16:00</div>
+            <div class="circulo">D</div>
+            <div class="circulo">S</div>
+            <div class="circulo">T</div>
+            <div class="circulo">Q</div>
+            <div class="circulo">Q</div>
+            <div class="circulo active">S</div>
+            <div class="circulo">S</div>
+        </div>
+
+        <div class="row abrir-episodios" style="margin-top: 16px;">
+            <div class="col">
+                <span class="material-icons-outlined open-icon">open_in_new</span>
+                <span>Abrir episódios</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" (click)="toggle()"></div>
+</div>

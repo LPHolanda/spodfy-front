@@ -1,0 +1,15 @@
+<div class="slider">
+    <p class="slider-titulo">{{ sliderTitulo }}</p>
+    <ngx-slick-carousel class="carousel" 
+                            #slickModal="slick-carousel" 
+                            [config]="slideConfig" 
+                            (init)="slickInit($event)"
+                            (breakpoint)="breakpoint($event)"
+                            (afterChange)="afterChange($event)"
+                            (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                <img src="{{ slide.img }}" class="slider-img" alt="" width="100%">
+                <p class="slider-podcast-nome">{{ slide.podcast }}</p>
+        </div>
+    </ngx-slick-carousel>
+</div>

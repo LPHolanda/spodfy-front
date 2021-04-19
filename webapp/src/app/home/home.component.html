@@ -1,0 +1,14 @@
+<app-header [titulo]="headerTitulo"></app-header>
+
+<div class="container">
+    <div class="row">
+        <button class="btn" (click)="pesquisar()">
+            <i class="fa fa-search"></i>
+            Pesquise podcasts
+        </button>
+    </div>
+</div>
+
+<ng-container *ngFor="let listaCards of listasCards">
+    <app-card-carousel [tipoLista]="listaCards"></app-card-carousel>
+</ng-container>

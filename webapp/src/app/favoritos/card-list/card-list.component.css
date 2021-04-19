@@ -1,0 +1,23 @@
+p {
+    color: white;
+}
+
+.item {
+    color: white;
+}
+
+.col-6 {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+.img-podcast-favorito {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 16px;
+    margin-bottom: 64px;
+}

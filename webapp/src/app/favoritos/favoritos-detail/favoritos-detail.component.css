@@ -1,0 +1,136 @@
+/* referente ao card suspenso */
+.menu-bar {
+    position:  fixed;
+    height: 80%;
+    width: 100%;
+    max-height: 350px;
+    margin: 0;
+    padding: 1em;
+    background: #333333;
+    left: 0;
+    bottom: -80%;
+    transition: bottom 0.7s ease-out;
+    z-index: 1;
+}
+
+@media (max-width: 500px) {
+    .menu-bar {
+        max-height: 330px !important;
+    }
+}
+
+.active-menu .menu-bar {
+    bottom: 0;
+}
+
+.active-menu .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, 0.4);
+}
+
+/* referente à imagem e descrição do podcast */
+p {
+    margin-bottom: 0;
+}
+
+.col-4 {
+    padding: 0;
+    padding-left: 16px;
+    text-align: center;
+}
+
+.col-7 {
+    padding: 0;
+    padding-left: 16px;
+    padding-right: 8px;
+}
+
+.detail-img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.detail-podcast {
+    font-size: 24px;
+}
+
+.detail-produtor {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.detail-descricao {
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+
+/* referente ao menu de opcoes (ouvir, favoritar, notificar) */
+.menu {
+    height: 56px;
+    padding: 0px;
+    background-color: #333333;
+}
+
+.menu-item {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.menu-item.active {
+    color: #1ED760;
+}
+
+p {
+    margin: 0px;
+    font-size: 12px;
+}
+
+/* referente a seleção de horário para notificação */
+.horario {
+    font-size: 24px;
+    color: white;
+    padding-right: 8px;
+}
+
+.col-3 {
+    padding: 0;
+    padding-left: 8px;
+}
+
+.circulo {
+    margin-left: 4px;
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    font-size: 17px;
+    color: white;
+    line-height: 34px;
+    text-align: center;
+    background: black;
+}
+
+.circulo.active {
+    background-color: #1ED760;
+}
+
+/* referente a abrir episódios */
+.abrir-episodios {
+    text-align: center;
+    font-size: 16px;
+}
+
+.material-icons-outlined.open-icon {
+    display: inline-flex;
+    vertical-align: top;
+    padding-right: 8px;
+}

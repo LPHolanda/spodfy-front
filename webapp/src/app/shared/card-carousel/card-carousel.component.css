@@ -1,0 +1,23 @@
+.slider {
+    margin-left: 8px;
+    margin-bottom: 24px;
+}
+
+.slider-titulo {
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.slider-img {
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 25px;
+}
+
+.slider-podcast-nome {
+    padding-top: 4px;
+    padding-left: 8px;
+    font-size: 16px;
+    margin: 0;
+}
