@@ -1,0 +1,36 @@
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 16px;
+    font-size: 24px;
+}
+
+p {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.div-img {
+    text-align: center;
+}
+
+.img-error {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.btn {
+    color: white;
+    background-color: #1ED760;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}

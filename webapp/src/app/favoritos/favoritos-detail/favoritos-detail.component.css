@@ -1,9 +1,9 @@
 /* referente ao card suspenso */
 .menu-bar {
     position:  fixed;
-    height: 80%;
     width: 100%;
-    max-height: 350px;
+    /* height: 80%;
+    max-height: 350px; */
     margin: 0;
     padding: 1em;
     background: #333333;
@@ -11,12 +11,6 @@
     bottom: -80%;
     transition: bottom 0.7s ease-out;
     z-index: 1;
-}
-
-@media (max-width: 500px) {
-    .menu-bar {
-        max-height: 330px !important;
-    }
 }
 
 .active-menu .menu-bar {
@@ -84,6 +78,7 @@ p {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .menu-item.active {
@@ -127,6 +122,7 @@ p {
 .abrir-episodios {
     text-align: center;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .material-icons-outlined.open-icon {

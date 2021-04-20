@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+}
+
+.img-podcast {
+    width: 80%;
+    max-width: 300px;
+}
+
+.gif-song {
+    width: 100%;
+    max-width: 300px;
+}
+
+.titulo-podcast {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.material-icons {
+    font-size: 100px;
+}

@@ -6,12 +6,13 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
 import { HomeComponent } from './home/home.component';
 import { PesquisarComponent } from './pesquisar/pesquisar.component';
 import { PlayerComponent } from './player/player.component';
+import { PodcastComponent } from './podcast/podcast.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'autenticacao'
   },
 
   { 
@@ -34,7 +35,7 @@ const routes: Routes = [
     path: 'pesquisar', 
     component: PesquisarComponent,
     data: {
-      title: 'Home'
+      title: 'Pesquisar'
     }
   },
 
@@ -42,7 +43,15 @@ const routes: Routes = [
     path: 'favoritos', 
     component: FavoritosComponent,
     data: {
-      title: 'Home'
+      title: 'Favoritos'
+    }
+  },
+
+  { 
+    path: 'podcast',
+    component: PodcastComponent,
+    data: {
+      title: 'Podcast'
     }
   },
 
@@ -50,7 +59,7 @@ const routes: Routes = [
     path: 'player', 
     component: PlayerComponent,
     data: {
-      title: 'Home'
+      title: 'Player'
     }
   },
 
@@ -83,7 +92,7 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: 'not-found'
+    redirectTo: 'error'
   }
 ];
 

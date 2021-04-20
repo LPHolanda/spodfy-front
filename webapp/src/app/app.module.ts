@@ -9,6 +9,7 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { PesquisarModule } from './pesquisar/pesquisar.module';
 import { FavoritosModule } from './favoritos/favoritos.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PodcastModule } from './podcast/podcast.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PesquisarModule,
     FavoritosModule,
     CoreModule,
+    PodcastModule,
     NgbModule
   ],
   providers: [],

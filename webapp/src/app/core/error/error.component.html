@@ -1,1 +1,9 @@
-<p>error works!</p>
+<app-header [titulo]="headerTitulo"></app-header>
+<div class="container">
+    <div class="div-img">
+        <img src="assets/img/404.png" class="img-error">
+    </div>
+    <h1>Ops...</h1>
+    <p>Não conseguimos encontrar nenhum resultado para o que você estava procurando.</p>
+    <button class="btn" routerLink="/home">Voltar</button>
+</div>

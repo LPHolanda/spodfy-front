@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  headerTitulo = 'Player';
+  headerTitulo: string = 'Podcast';
 
   constructor() { }
 
