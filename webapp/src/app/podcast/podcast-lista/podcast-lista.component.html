@@ -1,8 +1,28 @@
 <div class="container">
-    <div class="row">
-        <p>podcasts-lista works</p>
-        <!-- play | titulo    | icone tempo | icone data -->
-        <!--      | descricao |    tempo    |    data    -->
-        <!--      | leia mais | -->
+    <div *ngFor="let episodio of episodios" class="row">
+        <div class="col-1">
+            <span class="material-icons" style="cursor: pointer" (click)="play(episodio)">play_circle_outline</span>
+        </div>
+        <div class="col">
+            <p class="titulo">{{ episodio.nome }}</p>
+            <p>{{ episodio.descricao | slice:0:sliceNum }} {{ pontuacao }}</p>
+            <a class="ler-mais" (click)="lerMais(episodio.descricao)">{{ lerMaisTxt }}</a>
+        </div>
+        <div class="col-2">
+            <span class="material-icons podcast">schedule</span>
+            <p>{{ episodio.duracao }}</p>
+        </div>
+        <div class="col-2">
+            <span class="material-icons podcast">event</span>
+            <p>{{ episodio.data_lancamento | date: 'dd/MM/yyyy' }}</p>
+        </div>
+        
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <span class="material-icons expand">expand_more</span>
     </div>
 </div>

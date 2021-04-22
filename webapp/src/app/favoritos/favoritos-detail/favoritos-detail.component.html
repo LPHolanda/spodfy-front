@@ -1,31 +1,15 @@
 <div [ngClass]="{ 'active-menu': isShown }">
     <div class="menu-bar">
 
-        <div *ngIf="favorito">
-            <div class="row">
-                <div class="col-4">
-                    <img src="{{ favorito.podcast.img }}" class="detail-img">
-                </div>
-                <div class="col-7">
-                    <p class="detail-podcast">
-                        {{ favorito.podcast.nome_podcast }}
-                    </p>
-                    <p class="detail-produtor">
-                        {{ favorito.podcast.nome_produtor }}
-                    </p>
-                    <p class="detail-descricao">
-                        {{ favorito.podcast.descricao }}
-                    </p>
-                </div>
-                <i  tabindex="0" 
-                    (keyup.space)="toggle()" 
-                    (click)="toggle()"
-                    class="material-icons"
-                    style="cursor: pointer;">
-                    close
-                </i>
-            </div>
-        </div>
+        <app-podcast-description [podcast]="favorito.podcast">
+            <i  tabindex="0" 
+                (keyup.space)="toggle()"
+                (click)="toggle()"
+                class="material-icons"
+                style="cursor: pointer;">
+                close
+            </i>
+        </app-podcast-description>
 
         <div class="row" style="margin-top: 16px;">
             <div class="col menu">
@@ -53,19 +37,19 @@
             </div>
         </div>
 
-        <div class="row" style="margin-top: 16px; justify-content: center; cursor: pointer;">
+        <div *ngIf="auxNotification" class="row notificacoes">
             <div class="horario">16:00</div>
-            <div class="circulo">D</div>
-            <div class="circulo">S</div>
-            <div class="circulo">T</div>
-            <div class="circulo">Q</div>
-            <div class="circulo">Q</div>
-            <div class="circulo active">S</div>
-            <div class="circulo">S</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(1)">D</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(2)">S</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(3)">T</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(4)">Q</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(5)">Q</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(6)">S</div>
+            <div [activeGreen] class="circulo" (click)="setNotification(7)">S</div>
         </div>
 
         <div class="row abrir-episodios" style="margin-top: 16px;">
-            <div class="col" routerLink="/podcast">
+            <div class="col" (click)="goToPodcast(favorito.podcast)">
                 <span class="material-icons-outlined open-icon">open_in_new</span>
                 <span>Abrir episódios</span>
             </div>

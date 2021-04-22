@@ -9,7 +9,7 @@
 
 .gif-song {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .titulo-podcast {
@@ -20,4 +20,6 @@
 
 .material-icons {
     font-size: 100px;
+    margin-bottom: 64px;
+    cursor: pointer;
 }

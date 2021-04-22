@@ -48,7 +48,7 @@ const routes: Routes = [
   },
 
   { 
-    path: 'podcast',
+    path: 'podcast/:idPodcast',
     component: PodcastComponent,
     data: {
       title: 'Podcast'

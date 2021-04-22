@@ -6,6 +6,8 @@ import { FavoritosDetailComponent } from './favoritos-detail/favoritos-detail.co
 import { FavoritosRoutingModule } from './favoritos.routing.module';
 import { CoreModule } from '../core/core.module';
 import { CardListComponent } from './card-list/card-list.component';
+import { PodcastModule } from '../podcast/podcast.module';
+import { ActiveGreenModule } from '../shared/directives/active-green.module';
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import { CardListComponent } from './card-list/card-list.component';
     imports: [ 
         CommonModule,
         CoreModule,
-        FavoritosRoutingModule
+        FavoritosRoutingModule,
+        PodcastModule,
+        ActiveGreenModule
     ],
     exports: [
         FavoritosComponent,

@@ -1,0 +1,87 @@
+p {
+    margin-bottom: 4px;
+}
+
+hr {
+    color: #1ED760;
+    background-color: #1ED760;
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.container {
+    margin-bottom: 64px;
+}
+
+.row {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.col {
+    font-size: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.col-1 {
+    font-size: 24px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+}
+
+.col-2 {
+    font-size: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+}
+
+.col-12 {
+    padding: 0;
+    height: 10px;
+    align-items: middle;
+}
+
+.titulo {
+    font-size: 12px;
+}
+
+.ler-mais {
+    color: #1ED760;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.material-icons {
+    font-size: 24px;
+}
+
+.material-icons.podcast {
+    font-size: 10px;
+}
+
+.material-icons.expand {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (min-width: 500px) {  
+    .col {
+        font-size: 14px;
+    }
+
+    .col-2 {
+        font-size: 14px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .material-icons.podcast {
+        font-size: 20px;
+    }
+}

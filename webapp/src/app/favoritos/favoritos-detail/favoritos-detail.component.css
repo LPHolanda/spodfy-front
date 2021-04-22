@@ -26,43 +26,6 @@
     background: rgba(0,0,0, 0.4);
 }
 
-/* referente à imagem e descrição do podcast */
-p {
-    margin-bottom: 0;
-}
-
-.col-4 {
-    padding: 0;
-    padding-left: 16px;
-    text-align: center;
-}
-
-.col-7 {
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 8px;
-}
-
-.detail-img {
-    width: 100%;
-    max-width: 150px;
-}
-
-.detail-podcast {
-    font-size: 24px;
-}
-
-.detail-produtor {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.detail-descricao {
-    padding-top: 8px;
-    font-size: 12px;
-}
-
-
 /* referente ao menu de opcoes (ouvir, favoritar, notificar) */
 .menu {
     height: 56px;
@@ -91,6 +54,12 @@ p {
 }
 
 /* referente a seleção de horário para notificação */
+.notificacoes {
+    margin-top: 16px; 
+    justify-content: center; 
+    cursor: pointer;
+}
+
 .horario {
     font-size: 24px;
     color: white;
@@ -114,9 +83,9 @@ p {
     background: black;
 }
 
-.circulo.active {
+/* .circulo.active {
     background-color: #1ED760;
-}
+} */
 
 /* referente a abrir episódios */
 .abrir-episodios {

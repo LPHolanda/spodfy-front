@@ -1,1 +1,19 @@
-<p>podcast-description works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{ podcast.img }}" class="detail-img">
+        </div>
+        <div class="col">
+            <p class="detail-podcast">
+                {{ podcast.nome_podcast }}
+            </p>
+            <p class="detail-produtor">
+                {{ podcast.nome_produtor }}
+            </p>
+            <p class="detail-descricao">
+                {{ podcast.descricao }}
+            </p>
+        </div>
+        <ng-content></ng-content>
+    </div>
+</div>

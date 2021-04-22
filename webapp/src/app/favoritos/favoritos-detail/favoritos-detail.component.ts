@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Favoritos } from 'src/app/core/models/favoritos';
 import { MenuService } from 'src/app/core/menu/menu.service';
+import { Podcast } from 'src/app/core/models/podcast';
+import { Router } from '@angular/router';
+import { Notificacao } from 'src/app/core/models/notificacao';
 
 @Component({
   selector: 'app-favoritos-detail',
@@ -15,11 +18,11 @@ export class FavoritosDetailComponent implements OnInit {
   auxNotification: boolean = true;
   auxFavorite: boolean = true;
   iconFavorite: string;
+  teste = false;
   
-  constructor(private menuService: MenuService) { }
+  constructor(private menuService: MenuService, private router: Router) { }
   
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   ngOnDestroy(): void {
     this.auxShowMenu = true;
@@ -36,8 +39,6 @@ export class FavoritosDetailComponent implements OnInit {
 
   toggleNotification(){
     this.auxNotification = !this.auxNotification;
-
-    console.log(this.auxNotification);
   }
 
   toggleFavorite() {
@@ -49,7 +50,28 @@ export class FavoritosDetailComponent implements OnInit {
     }
 
     this.auxFavorite = !this.auxFavorite;
+  }
 
-    console.log(this.iconFavorite);
+  setNotification(diaDaSemana: number) {
+    let temDiaDaSemana = false;
+
+    this.favorito.notificacao.forEach(dia => {
+      if(dia == diaDaSemana) {
+        
+        this.favorito.notificacao = this.favorito.notificacao.filter(notif => notif != diaDaSemana);
+        temDiaDaSemana = true;
+      }
+    });
+
+    if(!temDiaDaSemana) {
+      this.favorito.notificacao.push(diaDaSemana);
+    }
+
+    this.teste = !this.teste;
+    // console.log(this.favorito.notificacao);
+  }
+
+  goToPodcast(podcast: Podcast) {
+    this.router.navigateByUrl('/podcast/' + podcast.id, { state: { podcast } });
   }
 }
