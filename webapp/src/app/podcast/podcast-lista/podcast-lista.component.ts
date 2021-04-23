@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { Episodios } from 'src/app/core/models/episodios';
 import { Podcast } from 'src/app/core/models/podcast';
 
@@ -21,7 +22,7 @@ export class PodcastListaComponent implements OnInit {
     id: 1,
     nome: 'Episódio xyz',
     descricao: 'Falamos muito sobre xyz, mas não se engane, também tem abc, def, ghi, e várias outras. Na verdade, todas as outras. Um oferecimento de Spotify: Escutar muda tudo.',
-    img: 'assets/img/podcasts/nerdcast.jfif',
+    img: 'assets/img/podcasts/episodios/nerdcast_768.jfif',
     duracao: '1:48:00',
     data_lancamento: new Date(),
     id_podcast: 7
@@ -30,7 +31,7 @@ export class PodcastListaComponent implements OnInit {
     id: 2,
     nome: 'Episódio abc',
     descricao: 'Falamos muito sobre xyz, mas não se engane, também tem abc, def, ghi, e várias outras. Na verdade, todas as outras. Um oferecimento de Spotify: Escutar muda tudo.',
-    img: 'assets/img/podcasts/nerdcast.jfif',
+    img: 'assets/img/podcasts/nao_ouvo_218.jfif',
     duracao: '48:00',
     data_lancamento: new Date(),
     id_podcast: 7
@@ -39,7 +40,7 @@ export class PodcastListaComponent implements OnInit {
     id: 3,
     nome: 'Episódio def',
     descricao: 'Falamos muito sobre xyz, mas não se engane, também tem abc, def, ghi, e várias outras. Na verdade, todas as outras. Um oferecimento de Spotify: Escutar muda tudo.',
-    img: 'assets/img/podcasts/nerdcast.jfif',
+    img: 'assets/img/podcasts/nao_ouvo_218.jfif',
     duracao: '2:02:00',
     data_lancamento: new Date(),
     id_podcast: 7
@@ -48,7 +49,7 @@ export class PodcastListaComponent implements OnInit {
     id: 4,
     nome: 'Episódio ghi',
     descricao: 'Falamos muito sobre xyz, mas não se engane, também tem abc, def, ghi, e várias outras. Na verdade, todas as outras. Um oferecimento de Spotify: Escutar muda tudo.',
-    img: 'assets/img/podcasts/nerdcast.jfif',
+    img: 'assets/img/podcasts/nerdcast_768.jfif',
     duracao: '1:13:00',
     data_lancamento: new Date(),
     id_podcast: 7
@@ -57,7 +58,7 @@ export class PodcastListaComponent implements OnInit {
     id: 5,
     nome: 'Episódio jkl',
     descricao: 'Falamos muito sobre xyz, mas não se engane, também tem abc, def, ghi, e várias outras. Na verdade, todas as outras. Um oferecimento de Spotify: Escutar muda tudo.',
-    img: 'assets/img/podcasts/nerdcast.jfif',
+    img: 'assets/img/podcasts/nerdcast_768.jfif',
     duracao: '33:00',
     data_lancamento: new Date(),
     id_podcast: 7
@@ -84,6 +85,6 @@ export class PodcastListaComponent implements OnInit {
   }
 
   play(episodio?: any) {
-    this.router.navigate(['/player']);
+    this.router.navigateByUrl('/player', { state: { episodio } });
   }
 }

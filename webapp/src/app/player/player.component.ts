@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Episodios } from '../core/models/episodios';
 
 @Component({
   selector: 'app-player',
@@ -7,11 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  headerTitulo: string = 'Podcast';
+  episodio: Episodios;
+  headerTitulo: string;
+  play = true;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.episodio = this.router.getCurrentNavigation().extras.state.episodio;
+    this.headerTitulo = this.episodio.nome;
+  }
 
   ngOnInit(): void {
+  }
+
+  playPause() {
+    this.play = !this.play;
   }
 
 }

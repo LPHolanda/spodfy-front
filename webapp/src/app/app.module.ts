@@ -10,6 +10,7 @@ import { PesquisarModule } from './pesquisar/pesquisar.module';
 import { FavoritosModule } from './favoritos/favoritos.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PodcastModule } from './podcast/podcast.module';
+import { PlayerModule } from './player/player.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PodcastModule } from './podcast/podcast.module';
     FavoritosModule,
     CoreModule,
     PodcastModule,
+    PlayerModule,
     NgbModule
   ],
   providers: [],

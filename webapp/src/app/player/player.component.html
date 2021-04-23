@@ -1,12 +1,25 @@
-<!-- <app-header [titulo]="headerTitulo"></app-header> -->
+<app-header [titulo]="headerTitulo"></app-header>
 <div class="container">
-    <img src="assets/img/podcasts/episodios/nao_ouvo.jfif" class="img-podcast">
-    <p class="titulo-podcast">Coronguinha Gaúcho</p>
-    <img src="assets/img/song.gif" class="gif-song">
-    <p>
-        <span class="material-icons">play_circle_outline</span>
-    </p>
-    <!-- <p>
-        <span class="material-icons">pause_circle_outline</span>
-    </p> -->
+    <img src="{{ episodio.img }}" class="img-podcast">
+    <p class="titulo-podcast">{{ episodio.nome }}</p>
+ 
+    <ng-container *ngIf="play; else pause">
+        <p>
+            <span class="material-icons" (click)="playPause()">play_circle_outline</span>
+        </p>
+    </ng-container>
+    
+    <ng-template #pause>
+        <div class="music">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+        </div>
+
+        <p>
+            <span class="material-icons" (click)="playPause()">pause_circle_outline</span>
+        </p>
+    </ng-template>
 </div>
