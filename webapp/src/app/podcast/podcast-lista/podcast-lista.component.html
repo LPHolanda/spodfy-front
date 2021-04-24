@@ -5,8 +5,13 @@
         </div>
         <div class="col">
             <p class="titulo">{{ episodio.nome }}</p>
-            <p>{{ episodio.descricao | slice:0:sliceNum }} {{ pontuacao }}</p>
-            <a class="ler-mais" (click)="lerMais(episodio.descricao)">{{ lerMaisTxt }}</a>
+            <ng-container *ngIf="episodio.descricao.length == 80; else lerMenos">
+                <p>{{ episodio.descricao | slice:0:80 }} {{ pontuacao }}</p>
+            </ng-container>
+            <ng-template #lerMenos>
+                <p>{{ episodio.descricao }} {{ pontuacao }}</p>
+            </ng-template>
+            <a class="ler-mais" (click)="lerMais(episodio)">{{ lerMaisTxt }}</a>
         </div>
         <div class="col-2">
             <span class="material-icons podcast">schedule</span>

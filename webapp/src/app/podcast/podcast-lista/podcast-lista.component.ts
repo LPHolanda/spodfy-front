@@ -69,13 +69,16 @@ export class PodcastListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  lerMais(descricao: string) {
+  lerMais(episodio: Episodios) {
     if(this.lerMaisBool) {
-      this.sliceNum = descricao.length;
+      episodio.descricao = episodio.descricao.slice(0,episodio.descricao.length);
+
       this.pontuacao = '';
       this.lerMaisTxt = 'Ler menos';
 
     } else {
+      episodio.descricao = episodio.descricao.slice(0,80);
+
       this.sliceNum = 80;
       this.pontuacao = '...';
       this.lerMaisTxt = 'Ler mais';

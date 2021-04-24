@@ -18,7 +18,6 @@ export class FavoritosDetailComponent implements OnInit {
   auxNotification: boolean = true;
   auxFavorite: boolean = true;
   iconFavorite: string;
-  teste = false;
   
   constructor(private menuService: MenuService, private router: Router) { }
   
@@ -39,6 +38,8 @@ export class FavoritosDetailComponent implements OnInit {
 
   toggleNotification(){
     this.auxNotification = !this.auxNotification;
+
+    this.favorito.notificacao = []; 
   }
 
   toggleFavorite() {
@@ -67,8 +68,18 @@ export class FavoritosDetailComponent implements OnInit {
       this.favorito.notificacao.push(diaDaSemana);
     }
 
-    this.teste = !this.teste;
-    // console.log(this.favorito.notificacao);
+    console.log(this.favorito.notificacao);
+  }
+
+  notificacaoTemDia(diaDaSemana: number): boolean {
+    let temDia = false;
+    this.favorito.notificacao.forEach(notif => {
+      if (notif == diaDaSemana) {
+        temDia = true;
+      }
+    });
+
+    return temDia;
   }
 
   goToPodcast(podcast: Podcast) {
