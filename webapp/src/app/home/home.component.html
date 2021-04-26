@@ -9,6 +9,7 @@
     </div>
 </div>
 
-<ng-container *ngFor="let listaCards of listasCards">
+<ng-container *ngFor="let listaCards of listasCards; let i=index">
     <app-card-carousel [tipoLista]="listaCards"></app-card-carousel>
+    <div *ngIf="i == (listasCards.length-1)" style="height: 40px"></div>
 </ng-container>

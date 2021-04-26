@@ -10,7 +10,7 @@ export class FavoritosComponent implements OnInit {
 
   headerTitulo = 'Favoritos';
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

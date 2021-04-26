@@ -13,7 +13,7 @@ export class PodcastListaComponent implements OnInit {
 
   @Input() podcast: Podcast;
 
-  lerMaisBool = true;
+  lerMaisBool = false;
   lerMaisTxt = 'Ler mais';
   sliceNum = 80;
   pontuacao = '...';

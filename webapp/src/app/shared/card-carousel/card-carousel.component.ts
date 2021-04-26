@@ -178,14 +178,6 @@ export class CardCarouselComponent implements OnInit {
   }
   
 
-
-
-
-
-
-
-
-
   // ============================ MÉTODOS DO SLICK SLIDER ==========================
   slickInit(e) {
     // console.log('slick initialized');

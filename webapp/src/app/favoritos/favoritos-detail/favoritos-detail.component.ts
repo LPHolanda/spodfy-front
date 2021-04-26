@@ -3,7 +3,6 @@ import { Favoritos } from 'src/app/core/models/favoritos';
 import { MenuService } from 'src/app/core/menu/menu.service';
 import { Podcast } from 'src/app/core/models/podcast';
 import { Router } from '@angular/router';
-import { Notificacao } from 'src/app/core/models/notificacao';
 
 @Component({
   selector: 'app-favoritos-detail',
@@ -15,7 +14,7 @@ export class FavoritosDetailComponent implements OnInit {
   isShown = false;
   favorito: Favoritos;
   auxShowMenu: boolean = true;
-  auxNotification: boolean = true;
+  iconNotificationOutlined: boolean = true;
   auxFavorite: boolean = true;
   iconFavorite: string;
   
@@ -37,9 +36,15 @@ export class FavoritosDetailComponent implements OnInit {
   }
 
   toggleNotification(){
-    this.auxNotification = !this.auxNotification;
+    this.iconNotificationOutlined = !this.iconNotificationOutlined;
 
-    this.favorito.notificacao = []; 
+    if (this.favorito.notificacao == null) {
+      this.favorito.notificacao = [];
+
+    } else {
+      this.favorito.notificacao = null;
+    }
+
   }
 
   toggleFavorite() {

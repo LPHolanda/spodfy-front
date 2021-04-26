@@ -13,7 +13,7 @@
 
         <div class="row" style="margin-top: 16px;">
             <div class="col menu">
-                <div class="menu-item" routerLink="/player">
+                <div class="menu-item" (click)="goToPodcast(favorito.podcast)">
                     <!-- <i class="fa fa-headphones"></i> -->
                     <span class="material-icons">headphones</span>
                     <p>Ouvir</p>
@@ -21,15 +21,23 @@
             </div>
             <div class="col menu">
                 <div class="menu-item" (click)="toggleFavorite()">
-                    <!-- <i class="fa fa-heart"></i> -->
-                    <span class="material-icons-outlined">favorite</span>
-                    <p>Favoritar</p>
+
+                    <ng-container *ngIf="auxFavorite; else iconFavorite">
+                        <span class="material-icons-outlined">favorite</span>
+                        <p>Favoritar</p>
+                    </ng-container>
+                    <ng-template #iconFavorite>
+                        <span class="material-icons-outlined">favorite_border</span>
+                        <p>Favoritar</p>
+                    </ng-template>
+                    
+                    
                 </div>
             </div>
             <div class="col menu">
                 <div class="menu-item" (click)="toggleNotification()">
                     <!-- <i class="fa fa-bell"></i> -->
-                    <span [ngClass]="{ 'material-icons': auxNotification == true, 'material-icons-outlined': auxNotification == false }">
+                    <span [ngClass]="{ 'material-icons-outlined': iconNotificationOutlined == false, 'material-icons': iconNotificationOutlined == true }">
                         notifications
                     </span>
                     <p>Notificar</p>
@@ -37,7 +45,7 @@
             </div>
         </div>
 
-        <div *ngIf="auxNotification" class="row notificacoes">
+        <div *ngIf="favorito.notificacao" class="row notificacoes">
             <div class="horario">16:00</div>
             <div [ngClass]="{ 'active': notificacaoTemDia(1) }" class="circulo" (click)="setNotification(1)">D</div>
             <div [ngClass]="{ 'active': notificacaoTemDia(2) }" class="circulo" (click)="setNotification(2)">S</div>
